@@ -44,7 +44,7 @@ export class Email extends Transport {
             from: this.from,
             to: this.to,
             subject: this.subject,
-            html: info
+            html: info.message
         };
         this.transporter.sendMail(options, (error) => {
             console.log(error);
