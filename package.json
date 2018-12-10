@@ -1,0 +1,33 @@
+{
+  "name": "winston-email",
+  "version": "1.0.0",
+  "description": "Winston transport to send email",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangjinzhou/winston-email.git"
+  },
+  "keywords": [
+    "winston",
+    "email"
+  ],
+  "author": "Jinzhou Zhang <jinzhouzgis@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhangjinzhou/winston-email/issues"
+  },
+  "homepage": "https://github.com/zhangjinzhou/winston-email#readme",
+  "dependencies": {
+    "@types/winston": "^2.4.4",
+    "nodemailer": "^4.7.0",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^4.6.5"
+  }
+}
