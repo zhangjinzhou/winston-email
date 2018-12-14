@@ -30,8 +30,9 @@ const logger = winston.createLogger({
 
 ## Options
 
-All options below are required. You can also include any winston transport default options.
+Set following options according to the descriptions above. You can also include any winston transport default options.
 
+### Email Options
 ```
 {
     from: string,
@@ -42,4 +43,18 @@ All options below are required. You can also include any winston transport defau
     to: string,
     subject?: string // Default "Winston Logger Error"
 }
+```
+
+### Winston Options
+```
+{
+    format?: logform.Format;
+    level?: string;
+    silent?: boolean;
+    handleExceptions?: boolean;
+
+    log?(info: any, next: () => void): any;
+    logv?(info: any, next: () => void): any;
+    close?(): void;
+  }
 ```
