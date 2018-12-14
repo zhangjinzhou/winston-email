@@ -8,8 +8,8 @@ interface EmailTransportOptions extends Transport.TransportStreamOptions {
     username: string;
     host: string;
     password: string;
-    subject: string;
-    secure: boolean;
+    subject?: string;
+    secure?: boolean;
 };
 
 export class Email extends Transport {
@@ -18,15 +18,14 @@ export class Email extends Transport {
 
         this.to = options.to;
         this.from = options.from;
-        this.subject = options.subject;
-
+        this.subject = options.subject || "Winston Logger Error";     
         this.transporter = nodemailer.createTransport({
             host: options.host,
             auth: {
                 user: options.username,
                 pass: options.password
             },
-            secure: options.secure
+            secure: options.secure || false
         });
     };
 

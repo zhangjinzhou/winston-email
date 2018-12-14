@@ -1,6 +1,6 @@
 {
   "name": "winston-email2",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Winston transport to send email",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

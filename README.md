@@ -20,8 +20,7 @@ const logger = winston.createLogger({
             host: "sending email account host",
             username: "sending email account",
             password: "sending email password",
-            //If true the connection will use TLS when connecting to server. If false (the default) then TLS is used if server supports the STARTTLS extension. In most cases set this value to true if you are connecting to port 465. For port 587 or 25 keep it false
-            secure: true/false,
+            secure: true/false, //If true the connection will use TLS when connecting to server. If false (the default) then TLS is used if server supports the STARTTLS extension. In most cases set this value to true if you are connecting to port 465. For port 587 or 25 keep it false
             to: "receiving email account" // Can be multiple. Use comma to split.
             subject: "notification email subject"
         })
@@ -39,8 +38,8 @@ All options below are required. You can also include any winston transport defau
     host: string,
     username: string,
     password: string,
-    secure: boolean,
+    secure?: boolean, // Default false
     to: string,
-    subject: string
+    subject?: string // Default "Winston Logger Error"
 }
 ```
